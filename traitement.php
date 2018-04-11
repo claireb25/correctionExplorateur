@@ -1,8 +1,8 @@
 <?php
-$content = ["listDir"=> "", "listFile"=> ""];
-$content['listDir'] = array_filter(glob("*"), "is_dir");
-$content['listFile'] = array_filter(glob("*"), "is_file");
-// echo $content['listFile'];
+$content = ["listDir"=> "", "listFile"=> ""]; // on créé un tableau qui contient deux éléments "listDir" et "listFile" qui sont vides
+$content['listDir'] = array_filter(glob("*"), "is_dir"); // on remplit listDir - on applique un filtre "dossier" --> is_dir, sur notre dossier glob("*")
+$content['listFile'] = array_filter(glob("*"), "is_file"); // on remplit listDir - on applique un filtre "fichiers" --> is_file, sur notre dossier glob("*")
+
 var_dump($content);
 
 
